@@ -12,7 +12,12 @@ const addTodo = () => {
         return
 
     } else {
-        newli.innerHTML = `${inpt.value} <span><button id="deleteBtn" onclick="deleteTodo(${index})">Delete</button></span>`;
+        newli.innerHTML = `
+        ${inpt.value} <span>
+            <button id="editBtn" onclick="editTodo(${index})">Edit</button>
+            <button id="deleteBtn" onclick="deleteTodo(${index})">Delete</button>
+        </span>
+        `;
         liBox.appendChild(newli);
     }
 
@@ -20,6 +25,16 @@ const addTodo = () => {
 
     inpt.value = '';
     console.log('add');
+}
+
+const editTodo = (index) => {
+    const li = document.querySelector(`#todo-${index}`);
+    const currentText = li.childNodes[0].textContent.trim();
+    const newText = prompt("Edit your todo:", currentText);
+
+    if (newText !== null && newText !== '') {
+        li.childNodes[0].textContent = newText;
+    }
 }
 
 const deleteTodo = (index) => {
