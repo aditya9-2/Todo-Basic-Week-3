@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+main {
+
+    width: 25rem;
+    height: 30rem;
+    margin-top: 5rem;
+    background-color: white;
+    box-shadow: 0px 5px 30px black;
+    border-radius: 8px;
+}
+
+.liBox {
+    height: 24rem;
+    overflow: auto;
+    padding: 0 15px;
+}
+
+.liBox li {
+    list-style: none;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 8px;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+#deleteBtn {
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: blueviolet;
+    color: white;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+}
+
+
+.inptArea {
+    background-color: rgba(59, 58, 58, 0.807);
+    padding: 12px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.15rem;
+}
+
+input {
+    font-size: 15px;
+    padding: 10px;
+    width: 70%;
+    border-radius: 8px;
+    border: none;
+
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border-radius: 8px;
+    width: 20%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: blueviolet;
+    color: white;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 400px) {
+    body {
+        overflow: hidden;
+    }
+
+    main {
+        width: 22rem;
+        height: 23rem;
+
+    }
+
+    .liBox {
+        height: 17rem;
+    }
+
+    .inptArea {
+        margin-top: 37px;
+
+    }
+
+    .inptArea input {
+        width: 60%;
+        font-size: 13px;
+    }
+
+    .inptArea button {
+        width: 25%;
+        font-size: 13px;
+    }
+
+}
